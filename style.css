@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* الأقسام الثلاثة مخفية، وتظهر بإضافة الكلاس visible */
+#age-prompt,
+#calculator,
+#apology {
+    display: none;
+}
+
+#age-prompt.visible,
+#calculator.visible,
+#apology.visible {
+    display: block;
+}
+
+/* ===== شاشة العمر ===== */
+#age-prompt input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#age-prompt button {
+    padding: 10px 25px;
+    background-color: #6a1b9a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#age-prompt button:hover {
+    background-color: #561580;
+}
+
+/* ===== الآلة الحاسبة ===== */
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    text-align: left;
+    direction: ltr;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.05s;
+}
+
+.buttons button:hover {
+    filter: brightness(0.93);
+}
+
+.buttons button:active {
+    transform: scale(0.96);
+}
+
+.buttons button.operator {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+.buttons button.equal {
+    background-color: #388e3c;
+    color: #fff;
+}
+
+.buttons button.clear {
+    grid-column: span 2;
+    background-color: #c62828;
+    color: #fff;
+    padding: 15px;
+}
+
+/* ===== رسالة الاعتذار ===== */
+#apology p {
+    color: #c62828;
+    background-color: #fdecec;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* رابط الرجوع للرئيسية */
+.back-link {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    color: #6a1b9a;
+    text-decoration: none;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+.back-link:hover { text-decoration: underline; }

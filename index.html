@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آلة حاسبة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="back-link" href="../../index.html">→ الرجوع للرئيسية</a>
+
+    <div class="container">
+
+        <!-- 1) شاشة إدخال العمر -->
+        <div id="age-prompt">
+            <h1>مرحباً! أدخل عمرك للمتابعة</h1>
+            <input type="number" id="age-input" placeholder="أدخل عمرك هنا" min="1">
+            <button onclick="checkAge()">تأكيد</button>
+        </div>
+
+        <!-- 2) الآلة الحاسبة -->
+        <div id="calculator">
+            <h1>آلة حاسبة</h1>
+            <input type="text" id="display" readonly>
+            <div class="buttons">
+                <button class="clear" onclick="clearDisplay()">مسح</button>
+                <button class="clear" onclick="deleteLast()">حذف</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button class="operator" onclick="appendToDisplay('/')">/</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button class="operator" onclick="appendToDisplay('*')">*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button class="operator" onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button class="equal" onclick="calculate()">=</button>
+                <button class="operator" onclick="appendToDisplay('+')">+</button>
+            </div>
+        </div>
+
+        <!-- 3) رسالة الاعتذار -->
+        <div id="apology">
+            <h1>عذراً!</h1>
+            <p>يجب أن يكون عمرك أكبر من 18 عاماً لاستخدام هذه الآلة الحاسبة.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
